@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .admin-container {
+      width: 90%;
+      max-width: 500px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      padding: 16px 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #555;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 8px 0;
+      font-size: 1.4rem;
+      color: #2c3e50;
+    }
+
+    .form-section {
+      margin-bottom: 24px;
+      border-top: 1px solid #ccc;
+      padding-top: 12px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #060607;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0a0a0a;
+    }
+
+    .msg {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.85em;
+      color: #7a100c;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <div class="header">
+      <span>Logged in as <strong>Admin</strong></span>
+    </div>
+
+    <div class="form-section" id="addbus">
+      <h1>ADD BUS</h1>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Bus Number" required />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="From" required />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="To" required />
+        <span class="msg" id="add-msg"></span>
+      </div>
+      <div class="form-group">
+        <button id="add-button">Add</button>
+      </div>
+    </div>
+
+    <div class="form-section" id="removebus">
+      <h1>REMOVE BUS</h1>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Bus Number" required />
+        <span class="msg" id="remove-msg"></span>
+      </div>
+      <div class="form-group">
+        <button id="remove-button">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../javascript/Admin.js"></script>
+</body>
+</html>

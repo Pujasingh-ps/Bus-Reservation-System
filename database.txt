@@ -1,0 +1,34 @@
+create database bus;
+use bus;
+create table admin (
+admin varchar(50),
+password varchar(30)
+);
+
+create table bus_details(
+Busid int not null primary key auto_increment,
+Bus_number char(10),
+source varchar(100),
+destination varchar(100),
+date date
+);
+
+create table user_info(
+id int not null primary key auto_increment,
+name varchar(99),
+middile varchar(99),
+last varchar(99),
+source varchar(99),
+destination varchar(99),
+adhaar varchar(15),
+mobile_no varchar(10),
+Time1 varchar(10),
+Timing varchar(13),
+Ticket_Number varchar(50)
+);
+
+
+insert into bus_details(bus_number,source,destination) value('CG04AB0001','Asansol','Disharghar');
+insert into bus_details(bus_number,source,destination) value('CG04AB0002','Disharghar','Asansol');
+insert into bus_details(bus_number,source,destination) value('CG04AB0003','DurgapuR','Raniganj');
+insert into bus_details(bus_number,source,destination) value('CG04AB0004','Raniganj','Durgpur');

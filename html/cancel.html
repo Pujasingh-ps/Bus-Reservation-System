@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancel Ticket</title>
+  <style>
+    body {
+      margin: 0;
+      background: #efefea;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h1 {
+      font-size: 50px;
+      text-align: center;
+      color: #0f1214;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      flex: 1;
+      font-size: 25px;
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 2;
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 20px;
+    }
+
+    .form-actions {
+      text-align: center;
+      margin-top: 1.8rem;
+    }
+
+    .form-actions button {
+      padding: 0.8rem 1.6rem;
+      background-color: #070707;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 0.5rem;
+      font-size: 20px;
+    }
+
+    .form-actions button:hover {
+      background-color: #0a0b0c;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container" action="../php/cancel.php" method="post">
+    <h1>Ticket Cancellation</h1>
+
+    <div class="form-group">
+      <label for="source">From:</label>
+      <input type="text" id="source" name="source" placeholder="From" required>
+    </div>
+
+    <div class="form-group">
+      <label for="destination">To:</label>
+      <input type="text" id="destination" name="destination" placeholder="To" required>
+    </div>
+
+    <div class="form-group">
+      <label for="Ticket_Number">Ticket Number:</label>
+      <input type="number" id="Ticket_Number" name="Ticket_Number" placeholder="Ticket No." required>
+    </div>
+
+    <div class="form-group">
+      <label for="samay">Timing:</label>
+      <select name="Timing" id="samay" required>
+        <option value="">None</option>
+        <option value="8:26 Am">8:26 AM</option>
+        <option value="11:57 Am">11:57 AM</option>
+        <option value="04:00 Pm">04:00 PM</option>
+        <option value="09:17 Pm">09:17 PM</option>
+        <option value="10:05 Pm">10:05 PM</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" onclick="location.href='../html/home.html'">Back</button>
+      <button type="submit">Confirm</button>
+    </div>
+  </form>
+</body>
+</html>
